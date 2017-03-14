@@ -1,1 +1,3 @@
 path: web/wp
+@multi:
+    ssh: pr-circle-t.46afe9ed-ebf0-44fe-acac-229694bfd8b3@appserver.pr-circle-t.46afe9ed-ebf0-44fe-acac-229694bfd8b3.drush.in:2222

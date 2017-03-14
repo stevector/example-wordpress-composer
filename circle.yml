@@ -21,6 +21,8 @@ machine:
     # ADMIN_EMAIL:    The email address to give the admin when installing.
     #
     # The variables below usually do not need to be modified.
+    WORDPRESS_ADMIN_USERNAME: $ADMIN_EMAIL
+    WORDPRESS_ADMIN_PASSWORD: $ADMIN_PASSWORD
     BRANCH: $(echo $CIRCLE_BRANCH | grep -v '^\(master\|[0-9]\+.x\)$')
     PR_ENV: ${BRANCH:+pr-$BRANCH}
     CIRCLE_ENV: ci-$CIRCLE_BUILD_NUM
@@ -57,7 +59,8 @@ dependencies:
     - terminus build-env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes --notify="$NOTIFY"
 test:
   override:
-    - echo test
+    - terminus env:wipe -n "$TERMINUS_SITE.$TERMINUS_ENV" --yes
+    - vendor/pantheon-systems/pantheon-wordpress-upstream-tests/test.sh --strict
   post:
     - terminus secrets:set -n "$TERMINUS_SITE.$TERMINUS_ENV" token "$GITHUB_TOKEN" --file='github-secrets.json' --clear --skip-if-empty
 
