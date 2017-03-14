@@ -522,16 +522,16 @@
         },
         {
             "name": "wpackagist-plugin/pantheon-advanced-page-cache",
-            "version": "0.1.3",
+            "version": "0.1.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/pantheon-advanced-page-cache/",
-                "reference": "tags/0.1.3"
+                "reference": "tags/0.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.0.1.3.zip",
-                "reference": "tags/0.1.3",
+                "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.0.1.4.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
