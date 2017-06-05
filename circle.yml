@@ -61,15 +61,12 @@ dependencies:
     - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
   post:
     - terminus auth:login -n --machine-token="$TERMINUS_TOKEN"
-    - terminus build-env:delete:ci -n "$TERMINUS_SITE" --keep=2 --yes
+    - terminus build:env:delete:ci -n "$TERMINUS_SITE" --keep=2 --yes
     - composer -n build-assets
     - terminus env:wake -n "$TERMINUS_SITE.dev"
-    - terminus build-env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes --notify="$NOTIFY"
-    # @todo, Right now it is necessary to re-copy the db from dev, to multidev
-    # on the non-first build of a PR. Behat tests make assumptions about the
-    # number of comments/posts/tags. Behat tests should be fixed but also
-    # there is a question of how environments should be reset. Should the DB
-    # be recopied for every build?
+    - terminus build:env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes --notify="$NOTIFY"
+    # This line will re-copy the database to the multidev environment to account
+    # for multiple CI builds running on the same multidev.
     - terminus env:clone-content "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes
 
 test:
