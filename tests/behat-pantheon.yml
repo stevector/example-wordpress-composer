@@ -3,7 +3,7 @@ default:
   suites:
     default:
       paths:
-        - behat/
+        - ./behat/
       contexts:
         - FeatureContext
         - Behat\MinkExtension\Context\MinkContext
@@ -17,7 +17,7 @@ default:
 
   extensions:
     Behat\MinkExtension:
-      base_url: https://dev-pantheon-wp-best-practices.pantheonsite.io
+      # base_url set by ENV
       browser_name: chrome
       default_session: default
       javascript_session: selenium2
@@ -30,5 +30,6 @@ default:
           selenium2: ~
 
     PaulGibbs\WordpressBehatExtension:
+      # WordPress username/password and site_url set by ENV
       default_driver: wpcli
       path: web/wp
