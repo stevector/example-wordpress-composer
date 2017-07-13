@@ -3,9 +3,9 @@
 
 This repository is a start state for a Composer-based WordPress workflow with Pantheon. It is meant to be copied by the the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin) which will set up for you a brand new
 
-1. GitHub repo (Eventually Bitbucket, GitLab etc)
-2. Free Pantheon sandbox site
-3. An intermediary Continuous Integration service (CircleCI, eventually others) to run tests and push from the source repo (GitHub) to Pantheon.
+* GitHub repo (Eventually Bitbucket, GitLab etc)
+* Free Pantheon sandbox site
+* An intermediary Continuous Integration service (CircleCI, eventually others) to run tests and push from the source repo (GitHub) to Pantheon.
 
 For more background information on this style of workflow, see the [Pantheon documentation](https://pantheon.io/docs/guides/github-pull-requests/).
 
