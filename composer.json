@@ -45,7 +45,10 @@
     "roots/wp-password-bcrypt": "^1.0.0"
   },
   "require-dev": {
-    "pantheon-systems/pantheon-wordpress-upstream-tests": "dev-relocated-wp-admin-support"
+    "ataylorme/behat-wordpress-extension": "dev-pantheon-fixes",
+    "behat/mink-goutte-driver": "^1.2",
+    "behat/mink-selenium2-driver": "^1.3",
+	  "roave/security-advisories": "dev-master"
   },
   "config": {
     "vendor-dir": "vendor",
