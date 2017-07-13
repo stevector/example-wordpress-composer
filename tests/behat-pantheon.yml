@@ -5,7 +5,7 @@ default:
       paths:
         - ./behat/
       contexts:
-        - FeatureContext
+        #- FeatureContext
         - Behat\MinkExtension\Context\MinkContext
         - PaulGibbs\WordpressBehatExtension\Context\ContentContext
         - PaulGibbs\WordpressBehatExtension\Context\DashboardContext
