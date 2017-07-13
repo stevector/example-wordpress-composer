@@ -38,7 +38,6 @@ machine:
     # variable, this workaround of writing to a file is
     # used.
     WORDPRESS_ADMIN_PASSWORD: $(cat  ~/WORDPRESS_ADMIN_PASSWORD)
-    WPCLI_ALIAS: "terminus -n wp $TERMINUS_SITE.$TERMINUS_ENV --"
 
 dependencies:
   cache_directories:
