@@ -385,12 +385,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ataylorme/behat-wordpress-extension.git",
-                "reference": "f9ee2f1f189c3f0c41ac7b6ff5c6384cda65faf9"
+                "reference": "6da988ecc23633388d7b5f5d13b571977b60f60a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ataylorme/behat-wordpress-extension/zipball/f9ee2f1f189c3f0c41ac7b6ff5c6384cda65faf9",
-                "reference": "f9ee2f1f189c3f0c41ac7b6ff5c6384cda65faf9",
+                "url": "https://api.github.com/repos/ataylorme/behat-wordpress-extension/zipball/6da988ecc23633388d7b5f5d13b571977b60f60a",
+                "reference": "6da988ecc23633388d7b5f5d13b571977b60f60a",
                 "shasum": ""
             },
             "require": {
@@ -439,7 +439,7 @@
             "support": {
                 "source": "https://github.com/ataylorme/behat-wordpress-extension/tree/pantheon-fixes"
             },
-            "time": "2017-07-13T22:39:18+00:00"
+            "time": "2017-07-13T22:44:51+00:00"
         },
         {
             "name": "behat/behat",
